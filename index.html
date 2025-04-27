@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=inter@400,500,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -109,8 +110,8 @@
             }
         });
         gsap.to(".img-holder", {
-            rotation: 0,
-            clipPath: 'polygon (0% 0%, 100% 0%, 100% 100% 0% 100%)',
+            rotation:0,
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             ease: "power2.inOut",
             scrollTrigger: {
                 start: "top top",
