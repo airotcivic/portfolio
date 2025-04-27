@@ -54,9 +54,9 @@
         <div class="content-holder">
             <div class="textrow">
                 <p>
-                In todays dynamically shifting landscape, master architects skillfully design
-                their lives with great mastery. Day by day, they meticulously allocate time
-                and energy according to passions and values to curate a unique existance.
+                    In todays dynamically shifting landscape, master architects skillfully design
+                    their lives with great mastery. Day by day, they meticulously allocate time
+                    and energy according to passions and values to curate a unique existance.
                 </p>
                 <br>
                 <br>
@@ -68,7 +68,7 @@
                 <p> These artisans, wielding the power of prioritization, bring to existance stories
                     of oneself. Every decision, with precision and reverence, crafts a narrative
                     of virtues, triumphs, and growth.
-                </p> 
+                </p>
                 <br>
                 <br>
                 <br>
@@ -79,7 +79,7 @@
                 <p>
                     Welcome to mine.
                 </p>
-            </div>    
+            </div>
         </div>
 
         <div class="content-holder">
@@ -132,11 +132,11 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name">
                         <input type="email" name="Email" placeholder="Your Email">
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button>Submit</button>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
@@ -164,8 +164,11 @@
             },
             onLeaveBack: () => {
                 gsap.set(".website-content", { position: 'fixed', top: '0' });
+            },
+            onLeave: () => {
+                gsap.set(".website-content", { position: 'absolute' });
             }
-        })
+        });
         gsap.to(".header .letters:first-child", {
             x: () => -innerWidth * 3,
             scale: 10,
@@ -220,6 +223,17 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRsxM8PC2_Rf4pWUIbyIYBVwYPzJBYiVmh4CUnBCracA2UfSYwjD4cI6LfcXC4shfE/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 

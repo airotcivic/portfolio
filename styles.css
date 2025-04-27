@@ -247,14 +247,26 @@ form input, form textarea{
     color:white;
     font-size:18px;
     border-radius:6px;
+    cursor: text;
 }
-form button{
-    padding:14px 60px;
-    font-size:18px;
-    margin-top:20px;
-    cursor:pointer;
-    align-items: center;
-    color:white
+form .btn2 {
+    background: white; /* nice bright color */
+    border: none;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: black;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form .btn2:hover {
+    background: white; /* slightly darker on hover */
+    transform: translateY(-3px); /* little "lift" when hovered */
+}
+.content-holder:last-child {
+    position: relative;
 }
 
 @media only screen and (max-width: 600px){
