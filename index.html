@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=inter@400,500,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
         </div>
         <div class="content-holder">
             <div class="row">
-                <h1>History</h1>
+                <h1>Welcome!</h1>
             </div>
             <div class="row">
                 <div class="img">
@@ -43,7 +44,6 @@
                     <img src="./img-2.jpg" alt="" />
                 </div>
             </div>
-
             <div class="row">
                 <div class="img">
                     <img src="./img-3.jpg" alt="" />
@@ -51,16 +51,21 @@
             </div>
             <div class="row">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam
-                    mollitia ab minima! Ut consequatur vitae error qui, sequi magni
-                    atque.
+                    In todays dynamically shifting landscape, master architects skillfully design 
+                    their lives with great mastery. Day by day, they meticulously allocate time 
+                    and energy according to passions and values to curate a unique existance.
                 </p>
             </div>
             <div class="row">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam
-                    mollitia ab minima! Ut consequatur vitae error qui, sequi magni
-                    atque.
+                    These artisans, wielding the power of prioritization, bring to existance stories
+                    of oneself. Every decision, with precision and reverence, crafts a narrative
+                    of virtues, triumphs, and growth.
+                </p>
+            </div>
+            <div class="row">
+                <p>
+                    Welcome to mine.
                 </p>
             </div>
         </div>
@@ -109,8 +114,8 @@
             }
         });
         gsap.to(".img-holder", {
-            rotation: 0,
-            clipPath: 'polygon (0% 0%, 100% 0%, 100% 100% 0% 100%)',
+            rotation:0,
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             ease: "power2.inOut",
             scrollTrigger: {
                 start: "top top",
