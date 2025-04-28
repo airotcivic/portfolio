@@ -26,7 +26,6 @@
             <div>A</div>
         </div>
     </div>
-
     <div class="website-content">
         <div class="img-holder">
             <img src="./hero.jpg" alt="" />
@@ -86,7 +85,7 @@
             <div class="headerrow">
                 <h1>Learn About</h1>
             </div>
-            <div class="content-holder">
+            <div class="tab-holder">
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('work')">Work</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
@@ -147,6 +146,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script> //scroll trigger header
+    // window.addEventListener('load', function () {
         gsap.registerPlugin(ScrollTrigger);
         document.addEventListener("DOMContentLoaded", function () {
             const contentHolderHeight = document.querySelector(".content-holder").offsetHeight;
@@ -218,6 +218,7 @@
                 scrub: 1
             }
         });
+    // });
     </script>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");

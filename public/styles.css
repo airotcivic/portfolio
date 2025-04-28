@@ -108,6 +108,14 @@ img {
     padding: 1em;
     min-height: 100vh;
 }
+.tab-holder {
+    position: relative;
+    top: -5px;
+    width: 100%;
+    color: #666;
+    padding: 1em;
+    min-height: 100vh;
+}
 
 .headerrow {
     margin: 1%;
