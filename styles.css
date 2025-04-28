@@ -248,6 +248,7 @@ form input, form textarea{
     font-size:18px;
     border-radius:6px;
     cursor: text;
+    z-index: 10;
 }
 form .btn2 {
     background: white; /* nice bright color */
@@ -259,6 +260,8 @@ form .btn2 {
     color: black;
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+
 }
 
 form .btn2:hover {
